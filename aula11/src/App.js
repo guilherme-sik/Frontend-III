@@ -24,10 +24,15 @@ function App() {
     >
       {({ handleSubmit, handleChange, errors }) => (
         <form onSubmit={handleSubmit}>
+          <input name="Nome" placeholder="Nome" onChange={handleChange} />
+
+          <input name="Telefone" placeholder="Telefone" onChange={handleChange} />
+
           <input name="email" placeholder="Email" onChange={handleChange} />
           {errors.email && <span>{errors.email}</span>}
+          
 
-          <button type="submit">Sumit</button>
+          <button type="submit">Submit</button>
         </form>
       )}
     </Formik>
